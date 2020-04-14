@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mmabas77.SpringBootCourseApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.213 s - in com.mmabas77.SpringBootCourseApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.321 s - in com.mmabas77.SpringBootCourseApplicationTests
