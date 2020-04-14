@@ -7,14 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mmabas" />
+        <module name="SpringBoot-Cource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mmabas" target="11" />
+      <module name="SpringBoot-Cource" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBoot-Cource" options="-parameters" />
       <module name="mmabas" options="-parameters" />
     </option>
   </component>

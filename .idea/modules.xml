@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mmabas.iml" filepath="$PROJECT_DIR$/mmabas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBoot-Cource.iml" filepath="$PROJECT_DIR$/.idea/SpringBoot-Cource.iml" />
     </modules>
   </component>
 </project>

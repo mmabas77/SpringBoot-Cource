@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="" />
+    <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/controllers/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +16,18 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="architecture" />
+        <entry key="$PROJECT_DIR$" value="develope" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -41,9 +56,9 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringBootCourseApplication">
     <configuration name="SpringBootCource0Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="mmabas" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mmabas77.SpringBootCource0Application" />
@@ -51,6 +66,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootCourseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="SpringBoot-Cource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mmabas77.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mmabas77.SpringBootCourseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SpringBootCourseApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -65,6 +98,8 @@
       <workItem from="1586853401772" duration="2351000" />
       <workItem from="1586856312124" duration="99000" />
       <workItem from="1586856426835" duration="877000" />
+      <workItem from="1586857383219" duration="407000" />
+      <workItem from="1586857804827" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="Add Bootstrap&amp;Jquery Dependency To Pom">
       <created>1586857253224</created>
@@ -73,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586857253224</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tracking All">
+      <created>1586857492016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586857492016</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,20 +138,33 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add Bootstrap&amp;Jquery Dependency To Pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Bootstrap&amp;Jquery Dependency To Pom" />
+    <MESSAGE value="Tracking All" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tracking All" />
   </component>
   <component name="WindowStateProjectService">
     <state x="267" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586856960675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="267" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1586856960675" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1586857251610">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1586857490561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586857251610" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586857279301">
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586857490561" />
+    <state x="514" y="242" width="586" height="264" key="MultipleFileMergeDialog" timestamp="1586857523110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586857279301" />
+    <state x="514" y="242" width="586" height="264" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586857523110" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1586857791176">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586857791176" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586857682408">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586857682408" />
+    <state x="557" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586857514781">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="557" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1586857514781" />
   </component>
 </project>
