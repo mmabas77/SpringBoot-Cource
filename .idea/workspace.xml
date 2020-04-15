@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/I18NConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/i18n/I18NService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/SpringBootCourseApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/SpringBootCourseApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/i18n/I18NService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/i18n/I18NService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +56,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -73,7 +75,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SpringBootCourseApplicationTests.testMessageByLocalService">
+  <component name="RunManager" selected="JUnit.SpringBootCourseApplicationTests">
+    <configuration name="SpringBootCourseApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringBoot-Cource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mmabas77.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mmabas77" />
+      <option name="MAIN_CLASS_NAME" value="com.mmabas77.SpringBootCourseApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootCourseApplicationTests.testMessageByLocalService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringBoot-Cource" />
       <extension name="coverage">
@@ -120,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringBootCourseApplicationTests" />
         <item itemvalue="JUnit.SpringBootCourseApplicationTests.testMessageByLocalService" />
-        <item itemvalue="Spring Boot.SpringBootCourseApplication" />
         <item itemvalue="Spring Boot.SpringBootCourseApplication" />
         <item itemvalue="Spring Boot.SpringBootCourseApplication" />
         <item itemvalue="Spring Boot.SpringBootCourseApplication" />
@@ -192,9 +210,14 @@
     <MESSAGE value="Add Bootstrap&amp;Jquery Dependency To Pom" />
     <MESSAGE value="Tracking All" />
     <MESSAGE value="Link Css &amp; Js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Link Css &amp; Js" />
+    <MESSAGE value="Added I18N Capability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added I18N Capability" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="411" y="255" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1586951215952">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="411" y="255" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1586951215952" />
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1586949256289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -247,14 +270,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="114" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586861023325" />
-    <state x="203" y="71" key="SettingsEditor" timestamp="1586948623062">
+    <state x="203" y="71" key="SettingsEditor" timestamp="1586951218758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="203" y="71" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586948623062" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586862633513">
+    <state x="203" y="71" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586951218758" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586950407766">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586862633513" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586950407766" />
     <state x="477" y="147" width="750" height="530" key="find.popup" timestamp="1586861601694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
