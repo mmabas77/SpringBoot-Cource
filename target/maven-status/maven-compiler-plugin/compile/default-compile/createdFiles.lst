@@ -1,2 +1,10 @@
-com\mmabas77\SpringBootCourseApplication.class
+com\mmabas77\config\SecurityConfig.class
+com\mmabas77\web\i18n\I18NService.class
+com\mmabas77\web\controllers\PayloadController.class
 com\mmabas77\web\controllers\IndexController.class
+com\mmabas77\web\controllers\LoginController.class
+com\mmabas77\web\controllers\CopyController.class
+com\mmabas77\SpringBootCourseApplication.class
+com\mmabas77\web\controllers\ContactController.class
+com\mmabas77\web\domain\frontend\FeedbackPojo.class
+com\mmabas77\config\I18NConfig.class

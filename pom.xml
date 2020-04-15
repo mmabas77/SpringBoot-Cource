@@ -41,6 +41,16 @@
             </exclusions>
         </dependency>
 
+        <!-- Spring Security Dependencies-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+            <!-- Spring Security Thymeleaf Dependencies-->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        </dependency>
         <!-- Web Jars For Jquery&bootstrap  Dependencies -->
         <dependency>
             <groupId>org.webjars</groupId>
