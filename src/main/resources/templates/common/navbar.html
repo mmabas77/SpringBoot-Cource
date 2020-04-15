@@ -13,9 +13,12 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" th:text="#{nav.home.txt}"></a></li>
+                <li class="active"><a href="/" th:text="#{nav.home.txt}"></a></li>
                 <li><a href="/about" th:text="#{nav.about.txt}"></a></li>
-                <li><a href="/contact" th:text="#{nav.contact.text}"></a></li>
+                <li><a href="/contact" th:text="#{nav.contact.txt}"></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/login" th:text="#{nav.login.txt}"></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
