@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/Plan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/DevConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/ProdConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stripe.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mmabas77-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mmabas77-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mmabas77.SpringBootCourseApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mmabas77.SpringBootCourseApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mmabas77.SpringBootCourseApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.mmabas77.SpringBootCourseApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/domain/frontend/FeedbackPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/domain/frontend/FeedbackPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/payload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
@@ -72,12 +74,15 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mmabas77.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\payload" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\user" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\contact" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\copy" />
-      <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -154,7 +159,7 @@
         <item itemvalue="JUnit.SpringBootCourseApplicationTests.testMessageByLocalService" />
         <item itemvalue="JUnit.SpringBootCourseApplicationTests" />
         <item itemvalue="Spring Boot.SpringBootCourseApplication" />
-        <item itemvalue="JUnit.SpringBootCourseApplicationTests" />
+        <item itemvalue="JUnit.SpringBootCourseApplicationTests.testMessageByLocalService" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +181,7 @@
       <workItem from="1586948141659" duration="898000" />
       <workItem from="1586949071475" duration="852000" />
       <workItem from="1586981187052" duration="747000" />
+      <workItem from="1587025112532" duration="4455000" />
     </task>
     <task id="LOCAL-00001" summary="Add Bootstrap&amp;Jquery Dependency To Pom">
       <created>1586857253224</created>
@@ -240,9 +246,14 @@
     <MESSAGE value="Added I18N Capability" />
     <MESSAGE value="Added About Page" />
     <MESSAGE value="Added Login Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Login Page" />
+    <MESSAGE value="Added Spring Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Spring Security" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="668" y="303" width="506" height="393" key="#Assign_Data_Sources" timestamp="1587030533351">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="668" y="303" width="506" height="393" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1587030533351" />
     <state x="447" y="275" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1586987508884">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -251,10 +262,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="411" y="255" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1586951215952" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1586983481926">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1587030718320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586983481926" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587030718320" />
     <state x="267" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586856960675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -263,38 +274,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586857490561" />
-    <state width="1024" height="279" key="GridCell.Tab.0.bottom" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.0.bottom" timestamp="1587030958396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
-    <state width="1024" height="279" key="GridCell.Tab.0.center" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587030958396" />
+    <state width="1024" height="279" key="GridCell.Tab.0.center" timestamp="1587030958395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
-    <state width="1024" height="279" key="GridCell.Tab.0.left" timestamp="1586988590940">
+    <state width="1024" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587030958395" />
+    <state width="1024" height="279" key="GridCell.Tab.0.left" timestamp="1587030958395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586988590940" />
-    <state width="1024" height="279" key="GridCell.Tab.0.right" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587030958395" />
+    <state width="1024" height="279" key="GridCell.Tab.0.right" timestamp="1587030958396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
-    <state width="1024" height="279" key="GridCell.Tab.1.bottom" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587030958396" />
+    <state width="1024" height="279" key="GridCell.Tab.1.bottom" timestamp="1587030958396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
-    <state width="1024" height="279" key="GridCell.Tab.1.center" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587030958396" />
+    <state width="1024" height="279" key="GridCell.Tab.1.center" timestamp="1587030958396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
-    <state width="1024" height="279" key="GridCell.Tab.1.left" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587030958396" />
+    <state width="1024" height="279" key="GridCell.Tab.1.left" timestamp="1587030958396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
-    <state width="1024" height="279" key="GridCell.Tab.1.right" timestamp="1586988590941">
+    <state width="1024" height="279" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587030958396" />
+    <state width="1024" height="279" key="GridCell.Tab.1.right" timestamp="1587030958396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="279" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586988590941" />
+    <state width="1024" height="279" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587030958396" />
     <state width="1024" height="279" key="GridCell.Tab.2.bottom" timestamp="1586955574025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -319,21 +330,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="114" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586861023325" />
-    <state x="203" y="71" key="SettingsEditor" timestamp="1586951218758">
+    <state x="231" y="82" key="SettingsEditor" timestamp="1587027050500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="203" y="71" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586951218758" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586982770127">
+    <state x="231" y="82" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587027050500" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586988846144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586982770127" />
-    <state x="477" y="147" width="750" height="530" key="find.popup" timestamp="1586861601694">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586988846144" />
+    <state x="477" y="147" width="750" height="530" key="find.popup" timestamp="1587026906120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="147" width="750" height="530" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1586861601694" />
+    <state x="477" y="147" width="750" height="530" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587026906120" />
     <state x="557" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586857514781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="557" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1586857514781" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587028153735">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587028153735" />
   </component>
 </project>

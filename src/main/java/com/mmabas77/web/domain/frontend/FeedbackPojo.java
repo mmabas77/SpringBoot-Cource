@@ -3,6 +3,8 @@ package com.mmabas77.web.domain.frontend;
 import java.io.Serializable;
 
 public class FeedbackPojo implements Serializable {
+
+    /* Serial Version UID For Serializable */
     private static final long serialVersionUID = 1L;
 
     String email;
