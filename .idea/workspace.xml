@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/repositories/PlanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/repositories/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/RepositoriesIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/enums/PlansEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/enums/RolesEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/utils/UsersUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/UserServiceIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/SpringBootCourseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/SpringBootCourseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/Plan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/Plan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/DevConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/DevConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/RepositoriesIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/RepositoriesIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,7 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -180,9 +184,9 @@
       <list>
         <item itemvalue="JUnit.All in SpringBoot-Cource" />
         <item itemvalue="JUnit.RepositoriesIntegrationTest" />
-        <item itemvalue="JUnit.RepositoriesIntegrationTest.testCreateNewRole" />
         <item itemvalue="Spring Boot.SpringBootCourseApplication" />
         <item itemvalue="JUnit.SpringBootCourseApplicationTests.testMessageByLocalService" />
+        <item itemvalue="JUnit.RepositoriesIntegrationTest.testCreateNewRole" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +275,8 @@
     <MESSAGE value="Added About Page" />
     <MESSAGE value="Added Login Page" />
     <MESSAGE value="Added Spring Security" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Spring Security" />
+    <MESSAGE value="Setup DB Console &amp; Created Repos With Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup DB Console &amp; Created Repos With Tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="303" width="506" height="393" key="#Assign_Data_Sources" timestamp="1587030533351">
@@ -286,10 +291,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="411" y="255" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1586951215952" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1587032825442">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1587117592284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587032825442" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587117592284" />
     <state x="267" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586856960675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -298,22 +303,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586857490561" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587034282350">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587117862395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587034282350" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1587034282350">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587117862395" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1587117862395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587034282350" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1587034282350">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587117862395" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1587117862395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587034282350" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1587034282350">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587117862395" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1587117862395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587034282350" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587117862395" />
     <state width="1024" height="279" key="GridCell.Tab.1.bottom" timestamp="1587034282347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -362,10 +367,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="231" y="82" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587027050500" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587031127598">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587113754763">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587031127598" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587113754763" />
     <state x="477" y="147" width="750" height="530" key="find.popup" timestamp="1587026906120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

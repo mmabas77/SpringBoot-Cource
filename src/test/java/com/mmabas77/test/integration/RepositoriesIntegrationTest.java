@@ -8,6 +8,9 @@ import com.mmabas77.backend.persistence.domain.backend.UserRole;
 import com.mmabas77.backend.persistence.repositories.PlanRepository;
 import com.mmabas77.backend.persistence.repositories.RoleRepository;
 import com.mmabas77.backend.persistence.repositories.UserRepository;
+import com.mmabas77.enums.PlansEnum;
+import com.mmabas77.enums.RolesEnum;
+import com.mmabas77.utils.UsersUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +25,6 @@ import java.util.Set;
 @SpringJUnitConfig(classes = SpringBootCourseApplication.class)
 public class RepositoriesIntegrationTest {
 
-    private static final Integer BASIC_PLAN_ID = 1;
-    private static final Integer BASIC_ROLE_ID = 1;
 
     @Autowired
     UserRepository userRepository;
@@ -43,7 +44,7 @@ public class RepositoriesIntegrationTest {
     public void testCreateNewPlan() {
         Plan basicPlan = createBasicPlan();
         planRepository.save(basicPlan);
-        Plan retrievedPlan = planRepository.findById(BASIC_PLAN_ID).get();
+        Plan retrievedPlan = planRepository.findById(PlansEnum.BASIC.getId()).get();
         Assert.notNull(retrievedPlan, "{RetrievedPlan} is null");
     }
 
@@ -51,14 +52,14 @@ public class RepositoriesIntegrationTest {
     public void testCreateNewRole() {
         Role basicRole = createBasicRole();
         roleRepository.save(basicRole);
-        Role retrievedRole = roleRepository.findById(BASIC_ROLE_ID).get();
+        Role retrievedRole = roleRepository.findById(RolesEnum.BASIC.getId()).get();
         Assert.notNull(retrievedRole, "{RetrievedRole} is null");
     }
 
     @Test
     public void testCreateNewUser() {
         //----------Add User----------//
-        User user = createBasicUser();
+        User user = UsersUtils.createBasicUser();
 
         //----------Add Plan----------//
         Plan plan = createBasicPlan();
@@ -72,11 +73,9 @@ public class RepositoriesIntegrationTest {
         //-Add Relation->
         Set<UserRole> userRoles = new HashSet<>();
         //-Combine     ->
-        UserRole userRole = new UserRole();
-        userRole.setUser(user);
-        userRole.setRole(role);
+        UserRole userRole = new UserRole(user, role);
         //-Add To Relation->
-        userRoles.addAll(userRoles);
+        userRoles.add(userRole);
         //Add Roles To DB->
         for (var toDbUserRole : userRoles) {
             roleRepository.save(toDbUserRole.getRole());
@@ -103,32 +102,11 @@ public class RepositoriesIntegrationTest {
 
     //--------------->Private Methods
     private Plan createBasicPlan() {
-        Plan plan = new Plan();
-        plan.setId(BASIC_PLAN_ID);
-        plan.setName("Basic");
-        return plan;
+        return new Plan(PlansEnum.BASIC);
     }
 
     private Role createBasicRole() {
-        Role role = new Role();
-        role.setId(BASIC_ROLE_ID);
-        role.setName("Basic");
-        return role;
+        return new Role(RolesEnum.BASIC);
     }
 
-    private User createBasicUser() {
-        User user = new User();
-        user.setUsername("UserName");
-        user.setStripeCustomerId("stripe-id");
-        user.setProfileImageUrl("img/url.img");
-        user.setPhoneNumber("+0123456789");
-        user.setPassword("password");
-        user.setFirstName("FirstName");
-        user.setLastName("LastName");
-        user.setEnabled(true);
-        user.setEmail("user@email.com");
-        user.setDescription("User Description!");
-        user.setCountry("EGP");
-        return user;
-    }
 }

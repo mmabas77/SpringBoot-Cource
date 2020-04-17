@@ -1,5 +1,7 @@
 package com.mmabas77.backend.persistence.domain.backend;
 
+import com.mmabas77.enums.RolesEnum;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
@@ -19,6 +21,11 @@ public class Role implements Serializable {
     String name;
 
     public Role() {
+    }
+
+    public Role(RolesEnum rolesEnum) {
+        this.id = rolesEnum.getId();
+        this.name = rolesEnum.getRoleName();
     }
 
     public int getId() {
@@ -52,7 +59,7 @@ public class Role implements Serializable {
     }
 
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<UserRole> userRoles= new HashSet<>();
+    private Set<UserRole> userRoles = new HashSet<>();
 
     public Set<UserRole> getUserRoles() {
         return userRoles;
