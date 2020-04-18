@@ -10,7 +10,7 @@ import com.mmabas77.backend.persistence.repositories.RoleRepository;
 import com.mmabas77.backend.persistence.repositories.UserRepository;
 import com.mmabas77.enums.PlansEnum;
 import com.mmabas77.enums.RolesEnum;
-import com.mmabas77.utils.UsersUtils;
+import com.mmabas77.utils.UserUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,8 +58,40 @@ public class RepositoriesIntegrationTest {
 
     @Test
     public void testCreateNewUser() {
+
+        //----------Check User----------//
+        User user = createBasicUser();
+        User toCheck = userRepository.findById(user.getId()).get();
+        Assert.notNull(toCheck, "User Is Null");
+        Assert.isTrue(toCheck.getId() == user.getId()
+                , "ID Is Not The Same");
+        Assert.notNull(toCheck.getPlan(), "Plan Is Null");
+        Assert.notNull(toCheck.getPlan().getId(), "Plan ID Is Null");
+        Set<UserRole> toCheckRoles = toCheck.getUserRoles();
+        for (var toCheckRole : toCheckRoles) {
+            Assert.notNull(toCheckRole.getRole(), "Role Is Null");
+            Assert.notNull(toCheckRole.getRole().getId(), "Role ID Is Null");
+        }
+    }
+
+    @Test
+    public void testDeleteUser() {
+        User user = createBasicUser();
+        userRepository.deleteById(user.getId());
+    }
+
+    //--------------->Private Methods
+    private Plan createBasicPlan() {
+        return new Plan(PlansEnum.BASIC);
+    }
+
+    private Role createBasicRole() {
+        return new Role(RolesEnum.BASIC);
+    }
+
+    private User createBasicUser() {
         //----------Add User----------//
-        User user = UsersUtils.createBasicUser();
+        User user = UserUtils.createBasicUser();
 
         //----------Add Plan----------//
         Plan plan = createBasicPlan();
@@ -76,37 +108,14 @@ public class RepositoriesIntegrationTest {
         UserRole userRole = new UserRole(user, role);
         //-Add To Relation->
         userRoles.add(userRole);
-        //Add Roles To DB->
-        for (var toDbUserRole : userRoles) {
-            roleRepository.save(toDbUserRole.getRole());
-        }
 
         //-Add Relation To User-//
         user.getUserRoles().addAll(userRoles);
 
         //----------Save User----------//
         user = userRepository.save(user);
-        //----------Check User----------//
-        User toCheck = userRepository.findById(user.getId()).get();
-        Assert.notNull(toCheck, "User Is Null");
-        Assert.isTrue(toCheck.getId() == user.getId()
-                , "ID Is Not The Same");
-        Assert.notNull(toCheck.getPlan(), "Plan Is Null");
-        Assert.notNull(toCheck.getPlan().getId(), "Plan ID Is Null");
-        Set<UserRole> toCheckRoles = toCheck.getUserRoles();
-        for (var toCheckRole : toCheckRoles) {
-            Assert.notNull(toCheckRole.getRole(), "Role Is Null");
-            Assert.notNull(toCheckRole.getRole().getId(), "Role ID Is Null");
-        }
-    }
 
-    //--------------->Private Methods
-    private Plan createBasicPlan() {
-        return new Plan(PlansEnum.BASIC);
-    }
-
-    private Role createBasicRole() {
-        return new Role(RolesEnum.BASIC);
+        return user;
     }
 
 }

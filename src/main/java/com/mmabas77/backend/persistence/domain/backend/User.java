@@ -1,17 +1,22 @@
 package com.mmabas77.backend.persistence.domain.backend;
 
 import org.hibernate.validator.constraints.Length;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
-public class User implements Serializable {
+public class User implements Serializable, UserDetails {
+
     /* Serial Version UID For Serializable */
     private static final long serialVersionUID = 1L;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,7 +41,7 @@ public class User implements Serializable {
     @JoinColumn(name = "plan_id")
     private Plan plan;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     Set<UserRole> userRoles = new HashSet<>();
 
     public User() {
@@ -159,23 +164,37 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
-                enabled == user.enabled &&
-                Objects.equals(username, user.username) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(email, user.email) &&
-                Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(phoneNumber, user.phoneNumber) &&
-                Objects.equals(description, user.description) &&
-                Objects.equals(country, user.country) &&
-                Objects.equals(profileImageUrl, user.profileImageUrl) &&
-                Objects.equals(stripeCustomerId, user.stripeCustomerId) &&
-                Objects.equals(plan, user.plan);
+        return id == user.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, password, email, firstName, lastName, phoneNumber, description, country, profileImageUrl, stripeCustomerId, enabled, plan);
+        return id;
     }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Set<GrantedAuthority> authorities = new HashSet<>();
+        userRoles.forEach(userRole ->
+                authorities.add(new Authority(userRole.getRole().getName()))
+        );
+        return authorities;
+    }
+
 }

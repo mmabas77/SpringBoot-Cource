@@ -2,9 +2,9 @@ package com.mmabas77.utils;
 
 import com.mmabas77.backend.persistence.domain.backend.User;
 
-public class UsersUtils {
+public class UserUtils {
 
-    private UsersUtils() {
+    private UserUtils() {
         throw new AssertionError("UsersUtils Is Not Instantiable");
     }
 

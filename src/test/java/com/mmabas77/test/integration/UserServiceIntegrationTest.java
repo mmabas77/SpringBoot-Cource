@@ -7,7 +7,7 @@ import com.mmabas77.backend.persistence.domain.backend.UserRole;
 import com.mmabas77.backend.service.UserService;
 import com.mmabas77.enums.PlansEnum;
 import com.mmabas77.enums.RolesEnum;
-import com.mmabas77.utils.UsersUtils;
+import com.mmabas77.utils.UserUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +27,7 @@ public class UserServiceIntegrationTest {
     @Test
     public void testCreateNewUser(){
         Set<UserRole> userRoles = new HashSet<>();
-        User basicUser = UsersUtils.createBasicUser();
+        User basicUser = UserUtils.createBasicUser();
         userRoles.add(new UserRole(basicUser,new Role(RolesEnum.BASIC)));
 
         User user = userService.createUser(basicUser, PlansEnum.BASIC,userRoles);

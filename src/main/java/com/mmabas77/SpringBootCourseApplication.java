@@ -6,14 +6,13 @@ import com.mmabas77.backend.persistence.domain.backend.UserRole;
 import com.mmabas77.backend.service.UserService;
 import com.mmabas77.enums.PlansEnum;
 import com.mmabas77.enums.RolesEnum;
-import com.mmabas77.utils.UsersUtils;
+import com.mmabas77.utils.UserUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -34,7 +33,7 @@ public class SpringBootCourseApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Set<UserRole> userRoles = new HashSet<>();
-        User user = UsersUtils.createBasicUser();
+        User user = UserUtils.createBasicUser();
         userRoles.add(new UserRole(user, new Role(RolesEnum.BASIC)));
         LOG.debug("Creating User With Username : {}", user.getUsername());
         userService.createUser(user, PlansEnum.PRO, userRoles);
