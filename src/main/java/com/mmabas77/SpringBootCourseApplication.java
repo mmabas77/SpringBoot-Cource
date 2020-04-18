@@ -33,7 +33,7 @@ public class SpringBootCourseApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Set<UserRole> userRoles = new HashSet<>();
-        User user = UserUtils.createBasicUser();
+        User user = UserUtils.createBasicUser("onrun","onrun@email.com");
         userRoles.add(new UserRole(user, new Role(RolesEnum.BASIC)));
         LOG.debug("Creating User With Username : {}", user.getUsername());
         userService.createUser(user, PlansEnum.PRO, userRoles);

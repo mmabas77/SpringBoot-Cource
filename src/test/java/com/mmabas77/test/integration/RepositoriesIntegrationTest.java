@@ -33,6 +33,7 @@ public class RepositoriesIntegrationTest {
     @Autowired
     PlanRepository planRepository;
 
+
     @BeforeEach
     public void init() {
         Assert.notNull(userRepository, "{UserRepository} is null");
@@ -60,7 +61,8 @@ public class RepositoriesIntegrationTest {
     public void testCreateNewUser() {
 
         //----------Check User----------//
-        User user = createBasicUser();
+        User user = createBasicUser("createUser",
+                "createUser@test.com");
         User toCheck = userRepository.findById(user.getId()).get();
         Assert.notNull(toCheck, "User Is Null");
         Assert.isTrue(toCheck.getId() == user.getId()
@@ -76,7 +78,7 @@ public class RepositoriesIntegrationTest {
 
     @Test
     public void testDeleteUser() {
-        User user = createBasicUser();
+        User user = createBasicUser("deleteUser","deleteUser@Test.com");
         userRepository.deleteById(user.getId());
     }
 
@@ -89,9 +91,10 @@ public class RepositoriesIntegrationTest {
         return new Role(RolesEnum.BASIC);
     }
 
-    private User createBasicUser() {
+    private User createBasicUser(String username, String email) {
+
         //----------Add User----------//
-        User user = UserUtils.createBasicUser();
+        User user = UserUtils.createBasicUser(username, email);
 
         //----------Add Plan----------//
         Plan plan = createBasicPlan();

@@ -16,10 +16,12 @@ public class Role implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String name;
+
+    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<UserRole> userRoles = new HashSet<>();
 
     public Role() {
     }
@@ -45,23 +47,6 @@ public class Role implements Serializable {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Role role = (Role) o;
-        return id == role.id &&
-                Objects.equals(name, role.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
-    }
-
-    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<UserRole> userRoles = new HashSet<>();
-
     public Set<UserRole> getUserRoles() {
         return userRoles;
     }
@@ -69,4 +54,19 @@ public class Role implements Serializable {
     public void setUserRoles(Set<UserRole> userRoles) {
         this.userRoles = userRoles;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Role role = (Role) o;
+        return id == role.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
+
+
 }

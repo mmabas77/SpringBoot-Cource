@@ -29,8 +29,12 @@ public class UserService {
 
     @Transactional
     public User createUser(User user, PlansEnum plansEnum, Set<UserRole> userRoles) {
+
         //BCrypt The Password//
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+
+        //Save User//
+        user = userRepository.save(user);
 
         //Set Plan//
         Plan plan = new Plan(plansEnum);
@@ -44,8 +48,10 @@ public class UserService {
             roleRepository.save(userRole.getRole());
         }
         user.getUserRoles().addAll(userRoles);
-        //Save User//
+
+        //Update User//
         user = userRepository.save(user);
+
         return user;
     }
 }

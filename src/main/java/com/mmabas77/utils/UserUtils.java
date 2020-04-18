@@ -8,9 +8,9 @@ public class UserUtils {
         throw new AssertionError("UsersUtils Is Not Instantiable");
     }
 
-    public static User createBasicUser() {
+    public static User createBasicUser(String username, String email) {
         User user = new User();
-        user.setUsername("UserName");
+        user.setUsername(username);
         user.setStripeCustomerId("stripe-id");
         user.setProfileImageUrl("img/url.img");
         user.setPhoneNumber("+0123456789");
@@ -18,7 +18,7 @@ public class UserUtils {
         user.setFirstName("FirstName");
         user.setLastName("LastName");
         user.setEnabled(true);
-        user.setEmail("user@email.com");
+        user.setEmail(email);
         user.setDescription("User Description!");
         user.setCountry("EGP");
         return user;

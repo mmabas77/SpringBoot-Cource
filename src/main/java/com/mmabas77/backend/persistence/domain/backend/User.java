@@ -22,8 +22,10 @@ public class User implements Serializable, UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(unique = true)
     private String username;
     private String password;
+    @Column(unique = true)
     private String email;
     private String firstName;
     private String lastName;

@@ -25,13 +25,16 @@ public class UserServiceIntegrationTest {
     UserService userService;
 
     @Test
-    public void testCreateNewUser(){
-        Set<UserRole> userRoles = new HashSet<>();
-        User basicUser = UserUtils.createBasicUser();
-        userRoles.add(new UserRole(basicUser,new Role(RolesEnum.BASIC)));
+    public void testCreateNewUser() {
+        String username = "ProUser";
+        String email = "ProUser@mmabas77.com";
+        User basicUser = UserUtils.createBasicUser(username, email);
 
-        User user = userService.createUser(basicUser, PlansEnum.BASIC,userRoles);
-        Assert.notNull(user,"User Is Null");
-        Assert.notNull(user.getId(),"User ID Is Null");
+        Set<UserRole> userRoles = new HashSet<>();
+        userRoles.add(new UserRole(basicUser, new Role(RolesEnum.PRO)));
+
+        User user = userService.createUser(basicUser, PlansEnum.PRO, userRoles);
+        Assert.notNull(user, "User Is Null");
+        Assert.notNull(user.getId(), "User ID Is Null");
     }
 }
