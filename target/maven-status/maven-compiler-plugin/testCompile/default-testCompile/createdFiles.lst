@@ -1,1 +1,8 @@
+com\mmabas77\test\integration\AbstractServiceIntegrationTest.class
+com\mmabas77\test\integration\PasswordResetTokenIntegrationTest.class
+com\mmabas77\test\integration\PasswordResetTokenServiceIntegrationTest.class
 com\mmabas77\SpringBootCourseApplicationTests.class
+com\mmabas77\test\integration\AbstractIntegrationTest.class
+com\mmabas77\test\integration\UserRepositoryIntegrationTest.class
+com\mmabas77\test\integration\UserServiceIntegrationTest.class
+com\mmabas77\test\unit\UserUtilsUnitTest.class
