@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-head"/>
+
+<body>
+
+<div th:replace="common/navbar :: common-navbar"/>
+
+<div class="col-md-6 col-md-offset-3 text-center">
+    <div class="well">
+        <h1 th:text="#{emailform.h1.txt}"></h1>
+        <p class="lead" th:text="#{emailform.lead.txt}"></p>
+        <form id="emailForm"
+              th:action="@{/forgot-password}"
+              method="post"
+              class="text-left">
+            <div class="form-group">
+                <label for="email" th:text="#{emailform.form.email}"></label>
+                <input type="text" id="email" name="email" class="form-control"/>
+            </div>
+            <button type="submit" class="btn btn-primary" th:text="#{emailform.form.submit}"></button>
+        </form>
+        <br/>
+        <div th:if="${MAIL_SENT_KEY!=null}"
+             class="alert alert-success alert-dismissible show" role="alert">
+            <span th:text="#{emailform.mailsent.txt}"></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<div th:replace="common/header :: before-body-script"/>
+</body>
+</html>

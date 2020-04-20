@@ -1,6 +1,9 @@
 package com.mmabas77.utils;
 
 import com.mmabas77.backend.persistence.domain.backend.User;
+import com.mmabas77.web.controllers.ForgotMyPasswordController;
+
+import javax.servlet.http.HttpServletRequest;
 
 public class UserUtils {
 
@@ -22,5 +25,19 @@ public class UserUtils {
         user.setDescription("User Description!");
         user.setCountry("EGP");
         return user;
+    }
+
+    public static String createPasswordResetUrl(HttpServletRequest request,
+                                                int userId,
+                                                String token) {
+        return request.getScheme() +
+                "://" +
+                request.getServerName() +
+                ":" +
+                request.getServerPort() +
+                request.getContextPath() +
+                ForgotMyPasswordController.CHANGE_PASSWORD_PATH +
+                "?id=" + userId +
+                "&token=" + token;
     }
 }

@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/converters/LocalDateTimeConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/PasswordResetToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/repositories/PasswordResetTokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/service/PasswordResetTokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/AbstractIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/AbstractServiceIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/PasswordResetTokenIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/PasswordResetTokenServiceIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/UserRepositoryIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/unit/UserUtilsUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/controllers/ForgotMyPasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/forgotpassword/emailForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/domain/backend/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/persistence/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/RepositoriesIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/UserServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/integration/UserServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mmabas77-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mmabas77-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mmabas77.SpringBootCourseApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mmabas77.SpringBootCourseApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mmabas77.SpringBootCourseApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.mmabas77.SpringBootCourseApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/utils/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/unit/UserUtilsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/unit/UserUtilsUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +23,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -80,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/forgotpassword" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
@@ -93,11 +75,11 @@
       <recent name="com.mmabas77.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\forgotpassword" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\payload" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\user" />
       <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\contact" />
-      <recent name="F:\Web\Java\SpringBoot-Cource\src\main\resources\templates\copy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -107,16 +89,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in SpringBoot-Cource">
-    <configuration name="All in SpringBoot-Cource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpringBoot-Cource" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.SpringBootCourseApplication">
     <configuration name="PasswordResetTokenIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringBoot-Cource" />
       <extension name="coverage">
@@ -185,6 +158,23 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserUtilsUnitTest.testPasswordResetEmailUrlConstruction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringBoot-Cource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mmabas77.test.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mmabas77.test.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.mmabas77.test.unit.UserUtilsUnitTest" />
+      <option name="METHOD_NAME" value="testPasswordResetEmailUrlConstruction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -199,13 +189,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootCourseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBoot-Cource" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mmabas77.SpringBootCourseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in SpringBoot-Cource" />
-        <item itemvalue="JUnit.PasswordResetTokenIntegrationTest.testMultipleTokensAreReturnedWhenQueringByUserId" />
-        <item itemvalue="JUnit.PasswordResetTokenIntegrationTest" />
-        <item itemvalue="JUnit.PasswordResetTokenIntegrationTest.testDeleteToken" />
+        <item itemvalue="JUnit.UserUtilsUnitTest.testPasswordResetEmailUrlConstruction" />
         <item itemvalue="JUnit.UserServiceIntegrationTest.testCreateNewUser" />
+        <item itemvalue="JUnit.PasswordResetTokenIntegrationTest.testMultipleTokensAreReturnedWhenQueringByUserId" />
+        <item itemvalue="JUnit.PasswordResetTokenIntegrationTest.testDeleteToken" />
+        <item itemvalue="JUnit.PasswordResetTokenIntegrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +228,7 @@
       <workItem from="1587111393084" duration="2146000" />
       <workItem from="1587197356086" duration="2923000" />
       <workItem from="1587286060272" duration="8525000" />
+      <workItem from="1587415452138" duration="8132000" />
     </task>
     <task id="LOCAL-00001" summary="Add Bootstrap&amp;Jquery Dependency To Pom">
       <created>1586857253224</created>
@@ -320,10 +318,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="303" width="506" height="393" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1587030533351" />
-    <state x="447" y="275" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1586987508884">
+    <state x="154" y="183" width="643" height="271" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1587418088586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="275" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/0.0.1536.824@0.0.1536.824" timestamp="1586987508884" />
+    <state x="154" y="183" width="643" height="271" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/0.0.1536.824@0.0.1536.824" timestamp="1587418088586" />
     <state x="411" y="255" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1586951215952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -348,38 +346,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586857490561" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587294755466">
+    <state width="1024" height="278" key="GridCell.Tab.0.bottom" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587294755466" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1587294755466">
+    <state width="1024" height="278" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="1024" height="278" key="GridCell.Tab.0.center" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587294755466" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1587294755466">
+    <state width="1024" height="278" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="1024" height="278" key="GridCell.Tab.0.left" timestamp="1587423883042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587294755466" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1587294755466">
+    <state width="1024" height="278" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587423883042" />
+    <state width="1024" height="278" key="GridCell.Tab.0.right" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587294755466" />
-    <state width="1024" height="278" key="GridCell.Tab.1.bottom" timestamp="1587294407031">
+    <state width="1024" height="278" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="1024" height="278" key="GridCell.Tab.1.bottom" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587294407031" />
-    <state width="1024" height="278" key="GridCell.Tab.1.center" timestamp="1587294407031">
+    <state width="1024" height="278" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="1024" height="278" key="GridCell.Tab.1.center" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587294407031" />
-    <state width="1024" height="278" key="GridCell.Tab.1.left" timestamp="1587294407031">
+    <state width="1024" height="278" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="1024" height="278" key="GridCell.Tab.1.left" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587294407031" />
-    <state width="1024" height="278" key="GridCell.Tab.1.right" timestamp="1587294407031">
+    <state width="1024" height="278" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="1024" height="278" key="GridCell.Tab.1.right" timestamp="1587423883043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587294407031" />
+    <state width="1024" height="278" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
     <state width="1024" height="279" key="GridCell.Tab.2.bottom" timestamp="1586955574025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -412,10 +410,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="231" y="82" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587027050500" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587286360607">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587297020750">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587286360607" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587297020750" />
     <state x="477" y="147" width="750" height="530" key="find.popup" timestamp="1587026906120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

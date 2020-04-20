@@ -26,6 +26,8 @@
             <button type="submit" class="btn btn-primary" th:text="#{nav.login.txt}"></button>
         </form>
         <br/>
+        <a th:href="@{/forgot-password}" th:text="#{login.forgotpassword.txt}"></a>
+        <br/>
         <div th:if="${param.error}"
              class="alert alert-danger alert-dismissible show" role="alert">
             <span th:text="#{login.error.txt}"></span>
