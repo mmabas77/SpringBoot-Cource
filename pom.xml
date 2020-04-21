@@ -53,6 +53,19 @@
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
         </dependency>
 
+        <!-- Hibernate Validator Dependencies-->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <!-- Data Faker Dependency -->
+        <dependency>
+            <groupId>uk.co.jemos.podam</groupId>
+            <artifactId>podam</artifactId>
+            <version>7.2.3.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
         <!-- Spring JPA Dependencies-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
