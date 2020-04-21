@@ -2,6 +2,7 @@ package com.mmabas77.config;
 
 import com.mmabas77.backend.service.UserSecurityService;
 import com.mmabas77.web.controllers.ForgotMyPasswordController;
+import com.mmabas77.web.controllers.SignUpController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -56,6 +57,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             /*----  Forgot Password  ----*/
             ForgotMyPasswordController.FORGOT_PASSWORD_URL_MAPPING,
             ForgotMyPasswordController.CHANGE_PASSWORD_PATH,
+            /*----  SignUp  ----*/
+            SignUpController.SIGN_UP_URL_MAPPING,
             /*----  Error  ----*/
             "/error/**/*",
             /*----  Console-(For H2 DB)  ----*/
