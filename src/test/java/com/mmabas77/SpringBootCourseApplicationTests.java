@@ -1,6 +1,6 @@
 package com.mmabas77;
 
-import com.mmabas77.web.i18n.I18NService;
+import com.mmabas77.backend.service.i18n.I18NService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

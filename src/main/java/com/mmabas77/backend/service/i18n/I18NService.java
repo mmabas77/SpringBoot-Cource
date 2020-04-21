@@ -1,4 +1,4 @@
-package com.mmabas77.web.i18n;
+package com.mmabas77.backend.service.i18n;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

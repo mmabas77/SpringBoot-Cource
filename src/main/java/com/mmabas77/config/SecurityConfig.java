@@ -55,6 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/contact/**",
             /*----  Forgot Password  ----*/
             ForgotMyPasswordController.FORGOT_PASSWORD_URL_MAPPING,
+            ForgotMyPasswordController.CHANGE_PASSWORD_PATH,
             /*----  Error  ----*/
             "/error/**/*",
             /*----  Console-(For H2 DB)  ----*/

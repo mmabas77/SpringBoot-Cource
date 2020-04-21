@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ed6fe0-94a0-4981-a416-9a5ab62255ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/controllers/ForgotMyPasswordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/forgotpassword/emailForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/forgotpassword/changePassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/utils/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/controllers/ForgotMyPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/controllers/ForgotMyPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mmabas77/web/i18n/I18NService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mmabas77/backend/service/i18n/I18NService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/unit/UserUtilsUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/test/unit/UserUtilsUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mmabas77/SpringBootCourseApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mmabas77/SpringBootCourseApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +227,7 @@
       <workItem from="1587111393084" duration="2146000" />
       <workItem from="1587197356086" duration="2923000" />
       <workItem from="1587286060272" duration="8525000" />
-      <workItem from="1587415452138" duration="8132000" />
+      <workItem from="1587415452138" duration="13005000" />
     </task>
     <task id="LOCAL-00001" summary="Add Bootstrap&amp;Jquery Dependency To Pom">
       <created>1586857253224</created>
@@ -279,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587201249160</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add Forgot Password Form &amp; Url Creator">
+      <created>1587424309091</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587424309091</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,17 +317,18 @@
     <MESSAGE value="Setup DB Console &amp; Created Repos With Tests" />
     <MESSAGE value="Replace In Memory Security With Persistence DB Security" />
     <MESSAGE value="Add Unique Indexes For Username &amp; Email With Some Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Unique Indexes For Username &amp; Email With Some Fixes" />
+    <MESSAGE value="Add Forgot Password Form &amp; Url Creator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Forgot Password Form &amp; Url Creator" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="303" width="506" height="393" key="#Assign_Data_Sources" timestamp="1587030533351">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="303" width="506" height="393" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1587030533351" />
-    <state x="154" y="183" width="643" height="271" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1587418088586">
+    <state x="154" y="183" width="643" height="271" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1587427947858">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="154" y="183" width="643" height="271" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/0.0.1536.824@0.0.1536.824" timestamp="1587418088586" />
+    <state x="154" y="183" width="643" height="271" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/0.0.1536.824@0.0.1536.824" timestamp="1587427947858" />
     <state x="411" y="255" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1586951215952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -334,6 +341,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587287413751" />
+    <state x="427" y="336" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1587424584573">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="427" y="336" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1587424584573" />
     <state x="551" y="281" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587200703952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -342,42 +353,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="267" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1586856960675" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1586857490561">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1587424307262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586857490561" />
-    <state width="1024" height="278" key="GridCell.Tab.0.bottom" timestamp="1587423883043">
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587424307262" />
+    <state width="613" height="277" key="GridCell.Tab.0.bottom" timestamp="1587430197906">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
-    <state width="1024" height="278" key="GridCell.Tab.0.center" timestamp="1587423883043">
+    <state width="613" height="277" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587430197906" />
+    <state width="613" height="277" key="GridCell.Tab.0.center" timestamp="1587430197906">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
-    <state width="1024" height="278" key="GridCell.Tab.0.left" timestamp="1587423883042">
+    <state width="613" height="277" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587430197906" />
+    <state width="613" height="277" key="GridCell.Tab.0.left" timestamp="1587430197906">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587423883042" />
-    <state width="1024" height="278" key="GridCell.Tab.0.right" timestamp="1587423883043">
+    <state width="613" height="277" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587430197906" />
+    <state width="613" height="277" key="GridCell.Tab.0.right" timestamp="1587430197906">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
-    <state width="1024" height="278" key="GridCell.Tab.1.bottom" timestamp="1587423883043">
+    <state width="613" height="277" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587430197906" />
+    <state width="613" height="277" key="GridCell.Tab.1.bottom" timestamp="1587430197907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
-    <state width="1024" height="278" key="GridCell.Tab.1.center" timestamp="1587423883043">
+    <state width="613" height="277" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587430197907" />
+    <state width="613" height="277" key="GridCell.Tab.1.center" timestamp="1587430197907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
-    <state width="1024" height="278" key="GridCell.Tab.1.left" timestamp="1587423883043">
+    <state width="613" height="277" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587430197907" />
+    <state width="613" height="277" key="GridCell.Tab.1.left" timestamp="1587430197907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
-    <state width="1024" height="278" key="GridCell.Tab.1.right" timestamp="1587423883043">
+    <state width="613" height="277" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587430197907" />
+    <state width="613" height="277" key="GridCell.Tab.1.right" timestamp="1587430197907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="278" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587423883043" />
+    <state width="613" height="277" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587430197907" />
     <state width="1024" height="279" key="GridCell.Tab.2.bottom" timestamp="1586955574025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -410,10 +421,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="231" y="82" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587027050500" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587297020750">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587424313803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587297020750" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587424313803" />
     <state x="477" y="147" width="750" height="530" key="find.popup" timestamp="1587026906120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
