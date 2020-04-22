@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.util.HashSet;
@@ -67,8 +68,8 @@ public class SignUpController {
 
     @PostMapping(SIGN_UP_URL_MAPPING)
     public String signUpPost(
-            @RequestParam(value = "planId", required = true) int planId,
-
+            @RequestParam(name = "planId", required = true) int planId,
+            @RequestParam(name = "file", required = false) MultipartFile file,
             @ModelAttribute(PAYLOAD_KEY)
             @Valid ProAccountPayload proAccountPayload,
 
@@ -85,6 +86,16 @@ public class SignUpController {
         }
 
         User user = UserUtils.fromWebToDomainUser(proAccountPayload);
+
+        if (file != null && !file.isEmpty()) {
+            String profileImageUrl = null;
+            if (profileImageUrl != null) {
+                user.setProfileImageUrl(profileImageUrl);
+            }else{
+                LOG.warn("Couldn't Upload Profile Image!");
+            }
+        }
+
         Plan plan = planService.findById(planId);
         if (plan == null) {
             modelMap.addAttribute(ERROR, true);
