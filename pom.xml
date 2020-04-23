@@ -99,6 +99,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Stripe Dependencies -->
+        <dependency>
+            <groupId>com.stripe</groupId>
+            <artifactId>stripe-java</artifactId>
+            <version>19.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>

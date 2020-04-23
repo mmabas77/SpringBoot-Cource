@@ -1,6 +1,7 @@
 package com.mmabas77.config;
 
 import org.h2.server.web.WebServlet;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,9 @@ import javax.servlet.ServletRegistration;
 @PropertySource("classpath:dev.properties")
 public class DevConfig {
 
+    @Value("${stripe.test.private.key}")
+    private String stripeDevKey;
+
     @Bean
     public ServletRegistrationBean h2ServletRegistration() {
         ServletRegistrationBean servletRegistrationBean =
@@ -22,4 +26,8 @@ public class DevConfig {
         return servletRegistrationBean;
     }
 
+    @Bean
+    public String stripeKey(){
+        return stripeDevKey;
+    }
 }

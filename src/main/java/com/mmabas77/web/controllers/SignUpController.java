@@ -92,7 +92,7 @@ public class SignUpController {
             //Todo:Complete Uploading Profile Image
             if (profileImageUrl != null) {
                 user.setProfileImageUrl(profileImageUrl);
-            }else{
+            } else {
                 LOG.warn("Couldn't Upload Profile Image!");
             }
         }
@@ -111,6 +111,16 @@ public class SignUpController {
             userRoles.add(new UserRole(user, new Role(RolesEnum.BASIC)));
             registeredUser = userService.createUser(user, PlansEnum.BASIC, userRoles);
         } else if (planId == PlansEnum.PRO.getId()) {
+            if (proAccountPayload.getCardCode().isBlank() ||
+                    proAccountPayload.getCardMonth().isBlank() ||
+                    proAccountPayload.getCardYear().isBlank() ||
+                    proAccountPayload.getCardNumber().isBlank()
+            ) {
+                modelMap.addAttribute(ERROR, true);
+                modelMap.addAttribute(MESSAGE
+                        , "You Must Enter Card Info");
+                return SIGN_UP_VIEW_NAME;
+            }
             userRoles.add(new UserRole(user, new Role(RolesEnum.PRO)));
             registeredUser = userService.createUser(user, PlansEnum.PRO, userRoles);
         }
