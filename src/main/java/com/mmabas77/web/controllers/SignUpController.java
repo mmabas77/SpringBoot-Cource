@@ -5,9 +5,11 @@ import com.mmabas77.backend.persistence.domain.backend.Role;
 import com.mmabas77.backend.persistence.domain.backend.User;
 import com.mmabas77.backend.persistence.domain.backend.UserRole;
 import com.mmabas77.backend.service.PlanService;
+import com.mmabas77.backend.service.StripeService;
 import com.mmabas77.backend.service.UserService;
 import com.mmabas77.enums.PlansEnum;
 import com.mmabas77.enums.RolesEnum;
+import com.mmabas77.utils.StripeUtils;
 import com.mmabas77.utils.UserUtils;
 import com.mmabas77.web.domain.frontend.BasicAccountPayload;
 import com.mmabas77.web.domain.frontend.ProAccountPayload;
@@ -26,7 +28,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Controller
@@ -39,6 +43,8 @@ public class SignUpController {
     UserService userService;
     @Autowired
     PlanService planService;
+    @Autowired
+    StripeService stripeService;
 
     public static final String SIGN_UP_URL_MAPPING = "/sign-up";
     private static final String SIGN_UP_VIEW_NAME = "registration/signup";
@@ -121,8 +127,24 @@ public class SignUpController {
                         , "You Must Enter Card Info");
                 return SIGN_UP_VIEW_NAME;
             }
+
+            // If the user has selected the pro account, creates the Stripe customer to store the stripe customer id in
+            // the db
+            Map<String, Object> stripeTokenParams = StripeUtils.extractTokenParamsFromSignupPayload(proAccountPayload);
+
+            Map<String, Object> customerParams = new HashMap<>();
+            customerParams.put("description", "DevOps Buddy customer. Username: " + proAccountPayload.getUsername());
+            customerParams.put("email", proAccountPayload.getEmail());
+            customerParams.put("plan", plan.getId());
+            LOG.info("Subscribing the customer to plan {}", plan.getName());
+            String stripeCustomerId = stripeService.createCustomer(stripeTokenParams, customerParams);
+            LOG.info("Username: {} has been subscribed to Stripe", proAccountPayload.getUsername());
+
+            user.setStripeCustomerId(stripeCustomerId);
+
             userRoles.add(new UserRole(user, new Role(RolesEnum.PRO)));
             registeredUser = userService.createUser(user, PlansEnum.PRO, userRoles);
+            LOG.debug(proAccountPayload.toString());
         }
 
         Authentication authentication = new UsernamePasswordAuthenticationToken(
